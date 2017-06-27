@@ -43,7 +43,7 @@ public class UseCaseDiagramGraph extends Graph
 {
 	private static final Node[] NODE_PROTOTYPES = new Node[]{new ActorNode(), new UseCaseNode(), new NoteNode()};
 	private static final Edge[] EDGE_PROTOTYPES = new Edge[]{new UseCaseAssociationEdge(),
-															 new UseCaseAnchorEdge(),
+															 new UseCaseAnchorEdge(),//my
 															 new UseCaseDependencyEdge(UseCaseDependencyEdge.Type.Extend),
 															 new UseCaseDependencyEdge(UseCaseDependencyEdge.Type.Include),
 															 new UseCaseGeneralizationEdge(),

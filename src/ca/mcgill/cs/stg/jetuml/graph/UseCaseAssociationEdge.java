@@ -46,4 +46,5 @@ public class UseCaseAssociationEdge extends SegmentedLabeledEdge
 	{
 		return SegmentationStyleFactory.createStraightStrategy().getPath(this, getGraph());
 	}
+	
 }
