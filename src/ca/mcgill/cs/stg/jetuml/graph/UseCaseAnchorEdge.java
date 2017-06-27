@@ -30,8 +30,7 @@ public class UseCaseAnchorEdge extends SegmentedLabeledEdge
 		pGraphics2D.draw(getShape());
 		pGraphics2D.setStroke(oldStroke);
 	}
-	
-	
+
 	/**
 	 * Creates an association edge.
 	 */

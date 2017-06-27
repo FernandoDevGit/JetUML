@@ -58,6 +58,7 @@ public class TestUsageScenariosUseCaseDiagram
 	private UseCaseNode aUseCaseNode1;
 	private UseCaseNode aUseCaseNode2;
 	private UseCaseAssociationEdge aAssociationEdge;
+	private UseCaseAnchorEdge aAnchorEdge;
 	private UseCaseDependencyEdge aDependencyEdge;
 	private UseCaseGeneralizationEdge aGeneralEdge;
 	
@@ -77,6 +78,7 @@ public class TestUsageScenariosUseCaseDiagram
 		aUseCaseNode1 = new UseCaseNode();
 		aUseCaseNode2 = new UseCaseNode();
 		aAssociationEdge = new UseCaseAssociationEdge();
+		aAnchorEdge = new UseCaseAnchorEdge();
 		aDependencyEdge = new UseCaseDependencyEdge();
 		aGeneralEdge = new UseCaseGeneralizationEdge();
 	}
@@ -145,6 +147,24 @@ public class TestUsageScenariosUseCaseDiagram
 		aDiagram.addEdge(new NoteEdge(),  new Point2D.Double(80, 20), new Point2D.Double(140, 20));
 		aDiagram.addEdge(new NoteEdge(),  new Point2D.Double(20, 20), new Point2D.Double(250, 20));
 		assertEquals(6, aDiagram.getEdges().size());
+	}
+	
+	
+	/** 
+	 * @author Fernando Trindade
+	 */
+	@Test
+	public void testAnchorEdgeCreation()
+	{
+		aDiagram.addNode(aActorNode1, new Point2D.Double(20, 20));
+		aDiagram.addNode(aActorNode2, new Point2D.Double(250, 20));
+		aDiagram.addNode(aUseCaseNode1, new Point2D.Double(80, 20));
+		aDiagram.addNode(aUseCaseNode2, new Point2D.Double(140, 20));
+		
+		aDiagram.addEdge(aAnchorEdge,  new Point2D.Double(20, 20), new Point2D.Double(250, 20));
+		
+		assertEquals(1, aDiagram.getEdges().size());
+		
 	}
 	
 	/**
