@@ -35,13 +35,14 @@ import ca.mcgill.cs.stg.jetuml.graph.UseCaseAssociationEdge;
 import ca.mcgill.cs.stg.jetuml.graph.UseCaseDependencyEdge;
 import ca.mcgill.cs.stg.jetuml.graph.UseCaseGeneralizationEdge;
 import ca.mcgill.cs.stg.jetuml.graph.UseCaseNode;
+import ca.mcgill.cs.stg.jetuml.graph.UseCaseNodeBusiness;
 
 /**
  *   A UML use case diagram.
  */
 public class UseCaseDiagramGraph extends Graph
 {
-	private static final Node[] NODE_PROTOTYPES = new Node[]{new ActorNode(), new UseCaseNode(), new NoteNode()};
+	private static final Node[] NODE_PROTOTYPES = new Node[]{new ActorNode(), new UseCaseNode(), new UseCaseNodeBusiness(), new NoteNode()};
 	private static final Edge[] EDGE_PROTOTYPES = new Edge[]{new UseCaseAssociationEdge(),
 															 new UseCaseAnchorEdge(),//my
 															 new UseCaseDependencyEdge(UseCaseDependencyEdge.Type.Extend),
