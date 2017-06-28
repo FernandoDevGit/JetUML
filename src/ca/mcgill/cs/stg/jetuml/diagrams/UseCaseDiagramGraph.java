@@ -34,6 +34,7 @@ import ca.mcgill.cs.stg.jetuml.graph.UseCaseAnchorEdge;
 import ca.mcgill.cs.stg.jetuml.graph.UseCaseAssociationEdge;
 import ca.mcgill.cs.stg.jetuml.graph.UseCaseDependencyEdge;
 import ca.mcgill.cs.stg.jetuml.graph.UseCaseGeneralizationEdge;
+import ca.mcgill.cs.stg.jetuml.graph.UseCaseNestEdge;
 import ca.mcgill.cs.stg.jetuml.graph.UseCaseNode;
 import ca.mcgill.cs.stg.jetuml.graph.UseCaseNodeBusiness;
 
@@ -48,6 +49,7 @@ public class UseCaseDiagramGraph extends Graph
 															 new UseCaseDependencyEdge(UseCaseDependencyEdge.Type.Extend),
 															 new UseCaseDependencyEdge(UseCaseDependencyEdge.Type.Include),
 															 new UseCaseGeneralizationEdge(),
+															 new UseCaseNestEdge(),
 															 new NoteEdge()};
 
 	@Override

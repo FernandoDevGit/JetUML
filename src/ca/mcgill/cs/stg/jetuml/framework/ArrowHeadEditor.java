@@ -26,8 +26,8 @@ package ca.mcgill.cs.stg.jetuml.framework;
  */
 public class ArrowHeadEditor extends PropertySelector
 {
-	private static final String[] NAMES = { "None", "Triangle", "V", "Diamond", "Black Diamond" };
-	private static final Object[] VALUES = { ArrowHead.NONE, ArrowHead.TRIANGLE, ArrowHead.V, ArrowHead.DIAMOND, ArrowHead.BLACK_DIAMOND };
+	private static final String[] NAMES = { "None", "Triangle", "V", "Diamond", "Black Diamond", "Circle"};
+	private static final Object[] VALUES = { ArrowHead.NONE, ArrowHead.TRIANGLE, ArrowHead.V, ArrowHead.DIAMOND, ArrowHead.BLACK_DIAMOND, ArrowHead.CIRCLE };
 	
 	/**
 	 * Creates a default editor.

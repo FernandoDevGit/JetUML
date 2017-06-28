@@ -1,5 +1,5 @@
 /**
- * @author Martin P. Robillard
+ * @author Fernando Trindade
  */
 
 package ca.mcgill.cs.stg.jetuml.graph;

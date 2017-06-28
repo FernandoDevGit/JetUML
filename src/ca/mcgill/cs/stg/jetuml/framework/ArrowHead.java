@@ -26,6 +26,9 @@ import java.awt.Graphics2D;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 
+import com.sun.javafx.geom.Ellipse2D;
+import com.sun.javafx.geom.Shape;
+
 /**
  * This class defines arrowheads of various shapes.
  */
@@ -38,6 +41,7 @@ public final class ArrowHead
 	public static final ArrowHead HALF_V = new ArrowHead();
 	public static final ArrowHead DIAMOND = new ArrowHead();
 	public static final ArrowHead BLACK_DIAMOND = new ArrowHead();
+	public static final ArrowHead CIRCLE = new ArrowHead();
 	   
 	// CSOFF:
 	private static final double ARROW_ANGLE = Math.PI / 6; 
@@ -56,7 +60,8 @@ public final class ArrowHead
    {
 	   GeneralPath path = getPath(pPoint1, pEnd);
 	   Color oldColor = pGraphics2D.getColor();
-	   if(this == BLACK_DIAMOND || this == BLACK_TRIANGLE) 
+	   
+	   if(this == BLACK_DIAMOND || this == BLACK_TRIANGLE ) 
 	   {
 		   pGraphics2D.setColor(Color.BLACK);
 	   }
@@ -64,6 +69,8 @@ public final class ArrowHead
 	   {
 		   pGraphics2D.setColor(Color.WHITE);
 	   }
+	   
+	   
 	   pGraphics2D.fill(path);
 	   pGraphics2D.setColor(oldColor);
 	   pGraphics2D.draw(path);
@@ -101,6 +108,11 @@ public final class ArrowHead
 	   {
 		   lReturn = "BLACK_DIAMOND";
 	   }
+	   else if( this == CIRCLE )
+	   {
+		   lReturn = "CIRCLE";		   
+	   }
+		   
 	   return lReturn;
    }
 
@@ -138,7 +150,7 @@ public final class ArrowHead
    			path.lineTo((float)x2, (float)y2);
    			path.closePath();                  
    		}
-   		else if(this == DIAMOND || this == BLACK_DIAMOND)
+   		else if(this == DIAMOND || this == BLACK_DIAMOND || this == CIRCLE)
    		{
    			double x3 = x2 - ARROW_LENGTH * Math.cos(angle + ARROW_ANGLE);
    			double y3 = y2 - ARROW_LENGTH * Math.sin(angle + ARROW_ANGLE);
